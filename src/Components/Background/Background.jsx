@@ -1,6 +1,6 @@
 // Import necessary dependencies and styles
 import React from 'react'
-import background from '../../assets/banner.png' // Importing the background image
+import background from '../../assets/Banner.png' // Importing the background image
 import Lock from '../../assets/Lock' // Importing the Lock icon component
 import styles from '../css/Background.module.scss' // Importing styles from a module
 import { useWidth } from '../../Context/WidthContext' // Importing a custom hook for getting screen width
