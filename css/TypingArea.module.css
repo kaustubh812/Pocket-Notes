@@ -1,0 +1,48 @@
+.writing_area {
+  width: 100%;
+  height: 27%;
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.writing_area .input_container {
+  box-sizing: border-box;
+  width: 95%;
+  height: 90%;
+  border-radius: 0.5rem;
+  border: 1px solid #CCC;
+  background-color: #FFF;
+  padding: 1rem 0.4rem 1rem 2rem;
+  display: flex;
+  gap: 0.3rem;
+}
+.writing_area .input_container textarea {
+  width: 95%;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  font-size: 1.65rem;
+  font-weight: 400;
+  resize: none;
+  border: none;
+  outline: none;
+}
+.writing_area .input_container .save_note_button {
+  height: 1.7rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 675px) {
+  .writing_area {
+    height: 22%;
+  }
+  .writing_area .input_container {
+    padding-left: 1.3rem;
+  }
+  .writing_area .input_container textarea {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=TypingArea.module.css.map */

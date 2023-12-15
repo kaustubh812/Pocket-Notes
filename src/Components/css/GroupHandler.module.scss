@@ -1,0 +1,16 @@
+.page_container {
+    width: 100vw;
+    height: 100vh; /* Corrected typo from 100svh to 100vh */
+    display: flex;
+
+    .createGroupModal{
+        height: 100vh; /* Corrected typo from 100svh to 100vh */
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(47, 47, 47, 0.75);
+    }
+}

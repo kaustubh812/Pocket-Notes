@@ -1,0 +1,15 @@
+.page_container {
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+}
+.page_container .create_group_modal {
+  height: 100svh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(47, 47, 47, 0.75);
+}/*# sourceMappingURL=GroupHandler.module.css.map */

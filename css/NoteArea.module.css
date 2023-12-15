@@ -1,0 +1,57 @@
+.notes_area {
+  flex: 1 1;
+  height: 100svh;
+  background-color: #DAE5F5;
+  position: relative;
+}
+.notes_area .groupname_bar {
+  box-sizing: border-box;
+  padding-left: 1rem;
+  width: 100%;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--dark-blue);
+}
+.notes_area .notes_container {
+  height: 62%;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 1rem 2rem 0;
+}
+.notes_area ::-webkit-scrollbar {
+  width: 0.7rem;
+}
+.notes_area ::-webkit-scrollbar-thumb {
+  border-radius: 0.3rem;
+  border: 2px solid transparent;
+  background-color: #FFF;
+  background-clip: content-box;
+}
+.notes_area ::-webkit-scrollbar-track {
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+.group_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 675px) {
+  .notes_area .groupname_bar {
+    height: 10%;
+  }
+  .notes_area .notes_container {
+    height: 69%;
+    padding: 0.9rem;
+    padding-bottom: 0;
+  }
+  .group_error {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=NoteArea.module.css.map */
