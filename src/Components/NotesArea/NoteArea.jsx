@@ -14,7 +14,7 @@ function NoteArea() {
     const [notes, setNotes] = useState([]);
     const [group, setGroup] = useState(null);
     const [groupError, setGroupError] = useState(false);
-    
+
     // Get the groupId from the URL parameters
     const { groupId } = useParams();
 
@@ -51,30 +51,30 @@ function NoteArea() {
         <>
             {!groupError ?
                 group &&
-                    <div className={styles.notes_area}>
-                        {/* Group name bar */}
-                        <div className={styles.groupNameBar}>
-                            {/* Back button (visible on small screens) */}
-                            {screenWidth < 675 && <Link to={'/'}><BackArrow /></Link>}
-                            {/* Display the GroupName component */}
-                            <GroupName groupName={group.groupName} bgColor={group.bgColor} fontColor='#FFF' />
-                        </div>
-
-                        {/* Notes container */}
-                        <div className={styles.notes_container}>
-                            {/* Map through notes and render NoteCard components */}
-                            {notes.map((note, index) => (
-                                <NoteCard key={index} content={note.content} date={note.date} time={note.time} />
-                            ))}
-                        </div>
-
-                        {/* TypingArea component for adding new notes */}
-                        <TypingArea addNote={addNote}/>
-                    </div> : 
-                    // Display an error message if the group is not found
-                    <div className={`${styles.notes_area} ${styles.groupError}`}>
-                        <h1>Group Not Found!</h1>
+                <div className={styles.notes_area}>
+                    {/* Group name bar */}
+                    <div className={styles.groupNameBar}>
+                        {/* Back button (visible on small screens) */}
+                        {screenWidth < 675 && <Link to={'/'}><BackArrow /></Link>}
+                        {/* Display the GroupName component */}
+                        <GroupName groupName={group.groupName} bgColor={group.bgColor} fontColor='#FFF' />
                     </div>
+
+                    {/* Notes container */}
+                    <div className={styles.notes_container}>
+                        {/* Map through notes and render NoteCard components */}
+                        {notes.map((note, index) => (
+                            <NoteCard key={index} content={note.content} date={note.date} time={note.time} />
+                        ))}
+                    </div>
+
+                    {/* TypingArea component for adding new notes */}
+                    <TypingArea addNote={addNote} />
+                </div> :
+                // Display an error message if the group is not found
+                <div className={`${styles.notes_area} ${styles.groupError}`}>
+                    <h1>Group Not Found!</h1>
+                </div>
             }
         </>
     )

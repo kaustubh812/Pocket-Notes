@@ -1,9 +1,9 @@
+import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
 import WidthProvider from './Context/WidthProvider.jsx'
-import './index.css'
+import { BrowserRouter } from 'react-router-dom'
 
 // Use ReactDOM.createRoot for concurrent mode
 ReactDOM.createRoot(document.getElementById('root')).render(

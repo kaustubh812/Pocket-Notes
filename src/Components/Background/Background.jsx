@@ -28,7 +28,7 @@ function Background() {
       {/* Encryption information */}
       <div className={styles.encryptionText}>
         {/* Lock icon with encryption text */}
-        <span><Lock/> end-to-end encrypted</span>
+        <span><Lock /> end-to-end encrypted</span>
       </div>
     </div>
   )

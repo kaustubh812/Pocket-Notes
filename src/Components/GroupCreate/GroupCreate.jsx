@@ -58,7 +58,7 @@ function GroupCreate({
             groupId: slugTransform(groupName),
             bgColor: groupColor
         }
-        
+
         // Call the addGroup function with the new group
         addGroup(newGroup);
     }
@@ -68,7 +68,7 @@ function GroupCreate({
         <div className={styles.createGroup} onClick={(e) => e.stopPropagation()}>
             <h3>Create New Group</h3>
             {/* Group Name input */}
-            <div className={styles.group_input}>
+            <div className={styles.groupInput}>
                 <label htmlFor="group-name">Group Name</label>
                 <input type="text" name='groupName' id='group-name'
                     value={groupName} maxLength={16} onChange={handleGroupNameChange} placeholder='Enter group name' />

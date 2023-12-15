@@ -6,21 +6,21 @@ import styles from '../css/GroupHandler.module.scss'
 
 // Define the GroupHandler component
 function GroupHandler({
-  children,
+    children,
 }) {
     // State variables to manage groups and the visibility of the GroupCreate component
     const [groups, setGroups] = useState([])
     const [showGroupCreate, setShowGroupCreate] = useState(false);
 
     // Load groups from local storage on component mount
-    useEffect(()=> {
+    useEffect(() => {
         const storedGroups = JSON.parse(localStorage.getItem('groups'));
-        if(storedGroups && storedGroups.length > 0) setGroups(storedGroups);
+        if (storedGroups && storedGroups.length > 0) setGroups(storedGroups);
     }, [])
 
     // Function to add a new group to the state and local storage
-    const addGroup = (newGroup)=> {
-        setGroups((prev)=> [...prev, newGroup])
+    const addGroup = (newGroup) => {
+        setGroups((prev) => [...prev, newGroup])
         localStorage.setItem('groups', JSON.stringify([...groups, newGroup]));
         setShowGroupCreate(false);
     }
@@ -29,14 +29,14 @@ function GroupHandler({
     return (
         <div className={styles.page_container}>
             {/* Display the GroupArea component */}
-            <GroupArea groups={groups} openGroupCreate={()=> setShowGroupCreate(true)}/>
-            
+            <GroupArea groups={groups} openGroupCreate={() => setShowGroupCreate(true)} />
+
             {/* Display children components */}
             {children}
-            
+
             {/* Display the GroupCreate component as a modal if showGroupCreate is true */}
-            {showGroupCreate && 
-                <div className={styles.createGroupModal} onClick={()=> setShowGroupCreate(false)}>
+            {showGroupCreate &&
+                <div className={styles.createGroupModal} onClick={() => setShowGroupCreate(false)}>
                     <GroupCreate groups={groups} addGroup={addGroup} />
                 </div>
             }
